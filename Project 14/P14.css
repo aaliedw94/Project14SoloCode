@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(29, 139, 101);
+    color: black;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    column-gap: 20px;
+    background-color: rgb(88, 65, 65);
+}
+/*STyling for map*/
+#map {
+    height: 400px;
+    width: 100%;
+    border: solid;
+    border-color: red;
+}
+/*Color of the time/date message*/
+#date{
+    color:aliceblue;
+}
+/*Color of the message that displays the current H1 color*/
+#color-change{
+    color: whitesmoke;
+}
+
+#welcome-message{
+    background-color:bisque;
+}
+/*Minor styling for buttons*/
+.buttons{
+    color:rgb(47, 205, 150);
+    background-color:rgb(88, 65, 65);
+    
+}
+
+/*.my_labels{
+
+}*/

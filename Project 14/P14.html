@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 14</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./P14.css">
+  </head>
+  <body>
+    <div class ="container">
+
+    
+    <h1 id="start">Project 14 Display: Google Maps and current date and time
+    </h1>
+    <p id="date"></p> <!--Shows the current date and time-->
+    <p id="color-change"></p> <!--Shows the color of the header-->
+    </div>
+    
+    <div id="welcome-message">
+    <p>Welcome to my mini Google Maps project. Here are the few functionalities that were implemented for the project so far.
+    </p>
+    <ul>
+        <li>The current time and date are displayed based on your time zone.</li>
+        <li>My page header will both change to a random color every 10 seconds, and display a small message
+            of the RGB value of the current color.
+        </li>
+        <li>Clicking anywhere on the map will show the latitude and longitude in a pop up window.</li>
+        <li>Below the map, you can search for a location and the map will update to show the location
+            with a dropped marker. Clicking the marker will provide a small welcome message.
+        </li>
+        <li>The placed marker can be dragged around the map, once placed.</li>
+        <li>You can type in two locations, an origin and destination, which will show the
+            quickest route based on transportation type and will display the travel time below
+            the input as well.
+        </li>
+        <li>Lastly, if you'd like to reset the map, just click the reset button below!</li>
+    </ul>
+</div>
+    
+    <div id="map"></div> <!--Div for map-->
+    <br>
+    <div class="my_labels">
+        <!--Label for users to enter a location, which results in a marker being placed as well-->
+        <label><b>Location by name: </b></label>
+        <input id="location" type="textbox">
+        <input type="button" class="buttons" value="Search Location" onClick="placeMarker()"><br><br>
+
+        <!--Labels for travelling from one destination to another-->
+        <label><b>Origin: </b></label>
+        <input id="origin" type="textbox">
+        <label><b>Destination: </b></label>
+        <input id="destination" type="textbox">
+        <b>Transportation type:</b> <!--Selecting transportation type-->
+        <select id="transpo-type">
+            <option value ="DRIVING">Driving</option>
+            <option value ="WALKING">Walking</option>
+            <option value ="BICYCLING">Bicycling</option>
+            <option value ="TRANSIT">Transit</option>
+        </select>
+        <input type="button" class="buttons" value="Searching route" onClick="RouteSearch()">
+        <input type="button" class="buttons" value="Reset" onClick="resetMap()">
+        <p id="directions-msg"></p> <!--Displays the travel time based on type of transportation selected-->
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIdaao14OK4UuYhYKhJlwtCilkJhoisK4&callback=initMap&v=weekly" defer></script>
+    <script src ="./P14.js"></script>
+  </body>
+  </html>
